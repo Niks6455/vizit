@@ -7,7 +7,7 @@ import { Section } from "../molecules/Section";
 export function AchievementsSection({ profile }: { profile: Profile }) {
   return (
     <Section id="achievements" eyebrow="Успехи" title="Достижения">
-      <Card className="p-7">
+      <Card className="p-5 sm:p-6 md:p-7">
         <ul
           data-stagger
           className="space-y-3 text-[14px] leading-7 text-(--muted)"

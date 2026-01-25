@@ -9,7 +9,7 @@ export function ExperienceSection({ profile }: { profile: Profile }) {
     <Section id="experience" eyebrow="Карьерный путь" title="Опыт">
       <div className="space-y-5">
         {profile.experience.map((e) => (
-          <Card key={`${e.period}-${e.company}`} className="p-7">
+          <Card key={`${e.period}-${e.company}`} className="p-5 sm:p-6 md:p-7">
             <div data-stagger className="flex items-start justify-between gap-6">
               <div data-stagger>
                 <div className="text-[18px] font-semibold tracking-[-0.02em] text-foreground">

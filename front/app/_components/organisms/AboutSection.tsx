@@ -9,8 +9,8 @@ import { Section } from "../molecules/Section";
 export function AboutSection({ profile }: { profile: Profile }) {
   return (
     <Section id="about" eyebrow="Коротко" title="Обо мне">
-      <div className="grid grid-cols-12 gap-6">
-        <Card className="col-span-7 p-7">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-6">
+        <Card className="p-5 sm:p-6 md:col-span-7 md:p-7">
           <p data-stagger className="text-[15px] leading-8 text-(--muted)">
             Разрабатываю интерфейсы для сложных web-систем с упором на
             производительность, масштабируемость и чистую архитектуру. Имею опыт
@@ -28,7 +28,7 @@ export function AboutSection({ profile }: { profile: Profile }) {
           </div>
         </Card>
 
-        <Card className="col-span-5 p-7">
+        <Card className="p-5 sm:p-6 md:col-span-5 md:p-7">
           <div
             data-stagger
             className="text-[12px] tracking-[0.18em] text-(--muted-2)"

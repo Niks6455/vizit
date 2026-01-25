@@ -30,8 +30,8 @@ export function ProjectModal({
 
   return (
     <Modal open={open} title={project.name} onClose={onClose}>
-      <div className="grid grid-cols-12 gap-6">
-        <div className="col-span-7">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
+        <div className="md:col-span-7">
           <div className="text-[14px] leading-8 text-(--muted)">
             {project.details ?? project.description}
           </div>
@@ -73,7 +73,7 @@ export function ProjectModal({
           ) : null}
         </div>
 
-        <div className="col-span-5">
+        <div className="md:col-span-5">
           <div className="text-[12px] tracking-[0.18em] text-(--muted-2)">
             PREVIEW
           </div>

@@ -5,13 +5,13 @@ import CircularText from "../molecules/CircularText";
 export function DecorCorner() {
   return (
     <div
-      className="pointer-events-none fixed bottom-10 right-10 z-0 opacity-30"
+      className="pointer-events-none fixed bottom-6 right-6 z-0 hidden opacity-25 sm:block md:bottom-10 md:right-10 md:opacity-30"
       aria-hidden="true"
     >
       <CircularText
         text="REACT*NEXT*VUE*NUXT*TYPESCRIPT"
         spinDuration={22}
-        size={230}
+        size={180}
         className="pointer-events-none"
         letterClassName="text-(--accent) opacity-50"
       />

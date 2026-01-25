@@ -8,8 +8,8 @@ import { Section } from "../molecules/Section";
 export function StackSection({ profile }: { profile: Profile }) {
   return (
     <Section id="stack" eyebrow="Инструменты" title="Технологии">
-      <div className="grid grid-cols-12 gap-6">
-        <Card className="col-span-6 p-7">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-6">
+        <Card className="p-5 sm:p-6 md:col-span-6 md:p-7">
           <div
             data-stagger
             className="text-[12px] tracking-[0.18em] text-(--muted-2)"
@@ -25,7 +25,7 @@ export function StackSection({ profile }: { profile: Profile }) {
           </div>
         </Card>
 
-        <Card className="col-span-6 p-7">
+        <Card className="p-5 sm:p-6 md:col-span-6 md:p-7">
           <div
             data-stagger
             className="text-[12px] tracking-[0.18em] text-(--muted-2)"

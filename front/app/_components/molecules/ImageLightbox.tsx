@@ -53,7 +53,7 @@ export function ImageLightbox({
 
   return createPortal(
     <div
-      className="fixed inset-0 flex items-center justify-center p-10"
+      className="fixed inset-0 flex items-center justify-center p-4 sm:p-8 md:p-10"
       style={{ zIndex: 110 }}
       onMouseDownCapture={(e) => {
         // Prevent portal event from closing the parent Modal
@@ -81,7 +81,7 @@ export function ImageLightbox({
         ].join(" ")}
         data-state={state}
       >
-        <div className="flex items-center justify-between gap-4 border-b border-[rgba(255,255,255,0.08)] px-6 py-4">
+        <div className="flex items-center justify-between gap-4 border-b border-[rgba(255,255,255,0.08)] px-5 py-4 sm:px-6">
           <div className="text-[13px] tracking-[0.12em] text-(--muted-2)">
             IMAGE PREVIEW
           </div>
@@ -94,7 +94,7 @@ export function ImageLightbox({
           </button>
         </div>
 
-        <div className="max-h-[82vh] overflow-auto p-6">
+        <div className="max-h-[82vh] overflow-auto p-4 sm:p-6">
           <div className="rounded-2xl border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.02)] p-3">
             <Image
               src={src}

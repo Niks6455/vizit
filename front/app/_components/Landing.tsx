@@ -24,35 +24,35 @@ export function Landing() {
       <DecorCorner />
       <SiteHeader profile={profile} />
 
-      <main className="relative z-10 mx-auto w-full max-w-5xl px-10 pb-24 pt-16">
+      <main className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-20 pt-10 sm:px-6 sm:pt-12 md:px-10 md:pb-24 md:pt-16">
         <Hero profile={profile} />
 
-        <div className="py-12">
+        <div className="py-10 md:py-12">
           <Hr />
         </div>
         <AboutSection profile={profile} />
 
-        <div className="py-12">
+        <div className="py-10 md:py-12">
           <Hr />
         </div>
         <StackSection profile={profile} />
 
-        <div className="py-12">
+        <div className="py-10 md:py-12">
           <Hr />
         </div>
         <ExperienceSection profile={profile} />
 
-        <div className="py-12">
+        <div className="py-10 md:py-12">
           <Hr />
         </div>
         <ProjectsSection profile={profile} />
 
-        <div className="py-12">
+        <div className="py-10 md:py-12">
           <Hr />
         </div>
         <AchievementsSection profile={profile} />
 
-        <div className="py-12">
+        <div className="py-10 md:py-12">
           <Hr />
         </div>
         <ContactsSection profile={profile} />

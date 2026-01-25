@@ -57,7 +57,7 @@ export function Modal({
 
   return createPortal(
     <div
-      className="fixed inset-0 flex items-center justify-center p-10"
+      className="fixed inset-0 flex items-center justify-center p-4 sm:p-8 md:p-10"
       style={{ zIndex: 100 }}
       role="dialog"
       aria-modal="true"
@@ -85,7 +85,7 @@ export function Modal({
         ].join(" ")}
         data-state={state}
       >
-        <div className="flex items-start justify-between gap-6 border-b border-[rgba(255,255,255,0.08)] px-8 py-6">
+        <div className="flex items-start justify-between gap-4 border-b border-[rgba(255,255,255,0.08)] px-5 py-4 sm:gap-6 sm:px-8 sm:py-6">
           <div>
             <div
               id={titleId}
@@ -107,7 +107,9 @@ export function Modal({
           </button>
         </div>
 
-        <div className="max-h-[78vh] overflow-auto px-8 py-7">{children}</div>
+        <div className="max-h-[78vh] overflow-auto px-5 py-5 sm:px-8 sm:py-7">
+          {children}
+        </div>
       </div>
     </div>,
     document.body,

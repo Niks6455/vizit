@@ -9,14 +9,14 @@ import { Section } from "../molecules/Section";
 export function ContactsSection({ profile }: { profile: Profile }) {
   return (
     <Section id="contacts" eyebrow="Давайте делать продукты" title="Контакты">
-      <div className="grid grid-cols-12 gap-6">
-        <Card className="col-span-7 p-7">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-6">
+        <Card className="p-5 sm:p-6 md:col-span-7 md:p-7">
           <div data-stagger className="text-[15px] leading-8 text-(--muted)">
             Открыт к новым проектам и предложениям. Удобнее всего общаться в
             Telegram или по почте. При необходимости с радостью созвонюсь и
             обсужу детали.
           </div>
-          <div data-stagger className="mt-6 flex flex-wrap gap-3">
+          <div data-stagger className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <LinkButton href="mailto:7929189niks64@gmail.com">
               Написать на почту
             </LinkButton>
@@ -26,7 +26,7 @@ export function ContactsSection({ profile }: { profile: Profile }) {
           </div>
         </Card>
 
-        <Card className="col-span-5 p-7">
+        <Card className="p-5 sm:p-6 md:col-span-5 md:p-7">
           <div
             data-stagger
             className="text-[12px] tracking-[0.18em] text-(--muted-2)"

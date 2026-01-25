@@ -14,7 +14,7 @@ export function Hero({ profile }: { profile: Profile }) {
         aria-hidden="true"
       />
 
-      <div className="mb-10">
+      <div className="mb-8 md:mb-10">
         <div
           data-hero
           className="mb-3 text-[12px] tracking-[0.18em] text-(--muted)"
@@ -23,14 +23,14 @@ export function Hero({ profile }: { profile: Profile }) {
         </div>
         <h1
           data-hero
-          className="text-[52px] font-semibold leading-[1.05] tracking-[-0.04em] text-foreground"
+          className="text-[38px] font-semibold leading-[1.05] tracking-[-0.04em] text-foreground sm:text-[44px] md:text-[52px]"
         >
           {profile.name}
         </h1>
-        <div data-hero className="mt-3 flex items-center gap-3">
+        <div data-hero className="mt-3 flex flex-wrap items-center gap-3">
           <div className="text-[16px] text-(--muted)">{profile.title}</div>
           <span className="text-(--muted-2)">/</span>
-          <div className="text-[16px] text-(--muted)">
+          <div className="text-[16px] text-(--muted) sm:whitespace-nowrap">
             React · Next · Vue · Nuxt · TypeScript
           </div>
         </div>
@@ -42,7 +42,7 @@ export function Hero({ profile }: { profile: Profile }) {
         </div>
       </div>
 
-      <Card className="relative overflow-hidden p-8">
+      <Card className="relative overflow-hidden p-5 sm:p-6 md:p-8">
         <div
           data-hero
           data-stagger
@@ -64,7 +64,7 @@ export function Hero({ profile }: { profile: Profile }) {
           >
             Резюме (PDF)
           </a>
-          <div className="ml-auto flex items-center gap-2 text-[12px] text-(--muted-2)">
+          <div className="ml-auto flex items-center gap-2 text-[12px] text-(--muted-2) max-sm:hidden">
             <span className="inline-block h-[6px] w-[6px] rounded-full bg-(--accent) opacity-70" />
             open to work
           </div>
