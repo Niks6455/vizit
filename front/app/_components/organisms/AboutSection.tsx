@@ -22,7 +22,7 @@ export function AboutSection({ profile }: { profile: Profile }) {
           <div data-stagger className="mt-6 flex flex-wrap gap-2">
             <Chip tone="accent">Complex Web Interfaces</Chip>
             <Chip>REST · WebSocket</Chip>
-            <Chip>Clear Architecture</Chip>
+            <Chip>Clean Architecture</Chip>
             <Chip>Data-Heavy Interfaces</Chip>
             <Chip>Backend Integration</Chip>
           </div>
