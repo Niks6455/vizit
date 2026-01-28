@@ -1,24 +1,25 @@
-import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from "next"
+import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google"
+import "./globals.css"
+import { YandexMetrika } from "./_components/YandexMetrika"
 
 const inter = Inter({
   variable: "--font-body-face",
   subsets: ["latin", "cyrillic"],
   display: "swap",
-});
+})
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display-face",
   subsets: ["latin"],
   display: "swap",
-});
+})
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono-face",
   subsets: ["latin", "cyrillic"],
   display: "swap",
-});
+})
 
 export const metadata: Metadata = {
   title: "Никита Капылов — Front-end Developer",
@@ -27,12 +28,12 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="ru">
@@ -40,7 +41,8 @@ export default function RootLayout({
         className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased`}
       >
         {children}
+        <YandexMetrika />
       </body>
     </html>
-  );
+  )
 }
