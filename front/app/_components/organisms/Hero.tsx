@@ -52,7 +52,7 @@ export function Hero({ profile }: { profile: Profile }) {
         </div>
 
         <div data-hero data-stagger className="mt-7 flex flex-wrap gap-3">
-          <LinkButton href="#projects">Смотреть проекты</LinkButton>
+          <LinkButton href="#projects" arrowVariant="black">Смотреть проекты</LinkButton>
           <LinkButton href="#contacts" variant="ghost">
             Связаться
           </LinkButton>

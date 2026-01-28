@@ -62,9 +62,9 @@ export function ProjectModal({
                     className="flex items-center justify-between rounded-xl border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.03)] px-4 py-3 text-[14px] text-foreground transition-colors hover:bg-[rgba(255,255,255,0.06)]"
                   >
                     <span className="text-(--muted)">{l.label}</span>
-                    <span className="font-medium">
+                    <span className="font-medium flex items-center gap-2">
                       {formatHost(l.href)}
-                      <span className="ml-2 text-(--accent)">↗</span>
+                      <img src="/icons/arrow.svg" alt="arrow-right" className="w-5 h-5" />
                     </span>
                   </a>
                 ))}

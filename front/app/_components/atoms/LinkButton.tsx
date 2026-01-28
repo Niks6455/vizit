@@ -4,11 +4,13 @@ export function LinkButton({
   href,
   children,
   variant = "primary",
+  arrowVariant = "green",
   className,
 }: {
   href: string;
   children: React.ReactNode;
   variant?: "primary" | "ghost";
+  arrowVariant?: "black" | "green";
   className?: string;
 }) {
   const base =
@@ -29,10 +31,14 @@ export function LinkButton({
       {children}
       <span
         aria-hidden="true"
-        className="text-(--accent)"
+        className="text-(--accent) flex items-center"
         style={{ transform: "translateY(-0.5px)" }}
       >
-        ↗
+        {arrowVariant === "black" ? (
+            <img src="/icons/arrowBlack.svg" alt="arrow-right" className="w-5 h-5" />
+        ) : (
+          <img src="/icons/arrow.svg" alt="arrow-right" className="w-5 h-5" />
+        )}
       </span>
     </a>
   );

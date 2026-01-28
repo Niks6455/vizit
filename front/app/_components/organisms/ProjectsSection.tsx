@@ -65,10 +65,10 @@ export function ProjectsSection({ profile }: { profile: Profile }) {
                         href={l.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center rounded-full border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.03)] px-3 py-1 text-[13px] leading-6 text-(--muted) transition-colors hover:bg-[rgba(255,255,255,0.06)]"
+                        className="flex items-center gap-2 rounded-full border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.03)] px-3 py-1 text-[13px] leading-6 text-(--muted) transition-colors hover:bg-[rgba(255,255,255,0.06)]"
                       >
                         {l.label}
-                        <span className="ml-2 text-(--accent)">↗</span>
+                        <img src="/icons/arrow.svg" alt="arrow-right" className="w-5 h-5" />
                       </a>
                     ))}
                   </div>
@@ -126,9 +126,10 @@ export function ProjectsSection({ profile }: { profile: Profile }) {
                       href={p.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-10 items-center justify-center rounded-full border border-[rgba(145,255,0,0.22)] bg-[rgba(145,255,0,0.06)] px-4 text-[13px] font-medium text-foreground transition-colors hover:bg-[rgba(145,255,0,0.12)]"
+                      className="flex items-center gap-2 h-10 items-center justify-center rounded-full border border-[rgba(145,255,0,0.22)] bg-[rgba(145,255,0,0.06)] px-4 text-[13px] font-medium text-foreground transition-colors hover:bg-[rgba(145,255,0,0.12)]"
                     >
-                      Открыть <span className="ml-2 text-(--accent)">↗</span>
+                      Открыть
+                        <img src="/icons/arrow.svg" alt="arrow-right" className="w-5 h-5" />
                     </a>
                   ) : null}
                 </div>
@@ -146,10 +147,10 @@ export function ProjectsSection({ profile }: { profile: Profile }) {
                       href={l.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center rounded-full border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.03)] px-3 py-1 text-[13px] leading-6 text-(--muted) transition-colors hover:bg-[rgba(255,255,255,0.06)]"
+                      className="flex items-center gap-2 rounded-full border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.03)] px-3 py-1 text-[13px] leading-6 text-(--muted) transition-colors hover:bg-[rgba(255,255,255,0.06)]"
                     >
                       {l.label}
-                      <span className="ml-2 text-(--accent)">↗</span>
+                      <img src="/icons/arrow.svg" alt="arrow-right" className="w-5 h-5" />
                     </a>
                   ))}
                 </div>
