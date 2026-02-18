@@ -72,8 +72,9 @@ export const profile: Profile = {
       "WordPress",
       "Gulp",
       "SCSS",
+      "CSR",
+      "SSG",
       "SSR",
-      "SPA",
     ],
   },
   experience: [
