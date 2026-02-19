@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google"
 import "./globals.css"
 import { YandexMetrika } from "./_components/YandexMetrika"
+import { MailRuPixel } from "./_components/MailRuPixel"
 
 const inter = Inter({
   variable: "--font-body-face",
@@ -42,6 +43,7 @@ export default function RootLayout({
       >
         {children}
         <YandexMetrika />
+        <MailRuPixel />
       </body>
     </html>
   )

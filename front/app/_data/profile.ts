@@ -67,6 +67,7 @@ export const profile: Profile = {
       "Material UI",
       "Git",
       "Postman",
+      "Sentry",
       "Figma",
       "PgAdmin",
       "WordPress",

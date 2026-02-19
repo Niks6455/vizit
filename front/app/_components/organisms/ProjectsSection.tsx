@@ -7,6 +7,7 @@ import { ProjectModal } from "../molecules/ProjectModal";
 import { Section } from "../molecules/Section";
 import ScrollStack, { ScrollStackItem } from "../molecules/ScrollStack";
 import { useMediaQuery } from "../../_hooks/useMediaQuery";
+import { reachGoal } from "../../_lib/mailRuPixel";
 
 export function ProjectsSection({ profile }: { profile: Profile }) {
   const [open, setOpen] = useState(false);
@@ -44,6 +45,7 @@ export function ProjectsSection({ profile }: { profile: Profile }) {
                   <button
                     type="button"
                     onClick={() => {
+                      reachGoal("Prosmotr");
                       setActiveName(p.name);
                       setOpen(true);
                     }}
@@ -113,6 +115,7 @@ export function ProjectsSection({ profile }: { profile: Profile }) {
                   <button
                     type="button"
                     onClick={() => {
+                      reachGoal("Prosmotr");
                       setActiveName(p.name);
                       setOpen(true);
                     }}
