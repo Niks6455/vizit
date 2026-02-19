@@ -1,6 +1,7 @@
 "use client";
 
 import type { Profile } from "../../_data/profile";
+import { reachGoal } from "../../_lib/mailRuPixel";
 import { formatLink } from "../../_utils/formatLink";
 import { LinkButton } from "../atoms/LinkButton";
 import { Card } from "../molecules/Card";
@@ -17,10 +18,17 @@ export function ContactsSection({ profile }: { profile: Profile }) {
             обсужу детали.
           </div>
           <div data-stagger className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <LinkButton href="mailto:7929189niks64@gmail.com">
+            <LinkButton
+              href="mailto:7929189niks64@gmail.com"
+              onClick={() => reachGoal("contact")}
+            >
               Написать на почту
             </LinkButton>
-            <LinkButton href="https://t.me/NiksKap" variant="ghost">
+            <LinkButton
+              href="https://t.me/NiksKap"
+              variant="ghost"
+              onClick={() => reachGoal("contact")}
+            >
               Написать в Telegram
             </LinkButton>
           </div>
@@ -42,6 +50,7 @@ export function ContactsSection({ profile }: { profile: Profile }) {
                 rel={
                   c.href.startsWith("http") ? "noopener noreferrer" : undefined
                 }
+                onClick={() => reachGoal("contact")}
                 data-stagger
                 className="flex items-center justify-between rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.02)] px-4 py-3 text-[14px] text-foreground transition-colors hover:bg-[rgba(255,255,255,0.05)]"
               >

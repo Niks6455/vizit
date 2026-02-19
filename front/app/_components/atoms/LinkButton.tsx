@@ -6,12 +6,14 @@ export function LinkButton({
   variant = "primary",
   arrowVariant = "green",
   className,
+  onClick,
 }: {
   href: string;
   children: React.ReactNode;
   variant?: "primary" | "ghost";
   arrowVariant?: "black" | "green";
   className?: string;
+  onClick?: () => void;
 }) {
   const base =
     "inline-flex h-11 items-center justify-center gap-2 rounded-full px-5 text-[14px] font-medium transition-colors";
@@ -27,6 +29,7 @@ export function LinkButton({
       className={cn(base, styles, className)}
       target={href.startsWith("http") ? "_blank" : undefined}
       rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+      onClick={onClick}
     >
       {children}
       <span

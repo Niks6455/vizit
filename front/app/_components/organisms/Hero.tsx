@@ -1,6 +1,7 @@
 "use client";
 
 import type { Profile } from "../../_data/profile";
+import { reachGoal } from "../../_lib/mailRuPixel";
 import { Card } from "../molecules/Card";
 import { LinkButton } from "../atoms/LinkButton";
 
@@ -60,6 +61,7 @@ export function Hero({ profile }: { profile: Profile }) {
             target="_blank"
             rel="noopener noreferrer"
             href="/resume.pdf"
+            onClick={() => reachGoal("rejume")}
             className="inline-flex h-11 items-center justify-center rounded-full border border-[rgba(145,255,0,0.25)] bg-[rgba(145,255,0,0.08)] px-5 text-[14px] font-medium text-foreground transition-colors hover:bg-[rgba(145,255,0,0.12)]"
           >
             Резюме (PDF)

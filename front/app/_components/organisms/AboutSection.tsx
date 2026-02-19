@@ -1,6 +1,7 @@
 "use client";
 
 import type { Profile } from "../../_data/profile";
+import { reachGoal } from "../../_lib/mailRuPixel";
 import { formatLink } from "../../_utils/formatLink";
 import { Chip } from "../atoms/Chip";
 import { Card } from "../molecules/Card";
@@ -44,6 +45,7 @@ export function AboutSection({ profile }: { profile: Profile }) {
                 rel={
                   c.href.startsWith("http") ? "noopener noreferrer" : undefined
                 }
+                onClick={() => reachGoal("contact")}
                 data-stagger
                 className="flex items-center justify-between rounded-xl border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.02)] px-4 py-3 text-[14px] text-foreground transition-colors hover:bg-[rgba(255,255,255,0.05)]"
               >
