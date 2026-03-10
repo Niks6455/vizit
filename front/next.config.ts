@@ -1,8 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Убираем standalone, используем обычный режим для статики
-  // output: "standalone",
+  output: "export",
+  ...(process.env.BASE_PATH && {
+    basePath: process.env.BASE_PATH,
+    assetPrefix: process.env.BASE_PATH,
+  }),
 };
 
 export default nextConfig;
