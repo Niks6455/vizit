@@ -26,7 +26,7 @@ export function ProjectModal({
   if (!project) return null;
 
   const images = project.images?.length
-    ? project.images
+    ? project.images.map(assetUrl)
     : [assetUrl("/projects/placeholder-1.svg")];
 
   return (
