@@ -43,7 +43,6 @@ export const profile: Profile = {
     "Делаю интерфейсы для продуктовых web-систем: от корпоративных сервисов до b2b-платформ. Основной стек — React / Next.js, Vue / Nuxt, TypeScript. Люблю аккуратный UI, сложные пользовательские сценарии и интерфейсы, которые остаются быстрыми при росте данных.",
   contacts: [
     { label: "Email", href: "mailto:7929189niks64@gmail.com" },
-    { label: "Телефон", href: "tel:+79508630484" },
     { label: "GitHub", href: "https://github.com/Niks6455" },
     { label: "Telegram", href: "https://t.me/NiksKap" },
     { label: "VK", href: "https://vk.com/nkapylov" },
