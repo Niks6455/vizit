@@ -39,8 +39,8 @@ jobs:
       - name: Build
         working-directory: front
         env:
-          # Сайт будет по адресу: https://<username>.github.io/<repo-name>/
           BASE_PATH: /${{ github.event.repository.name }}
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: pnpm build
 
       - name: Upload artifact
