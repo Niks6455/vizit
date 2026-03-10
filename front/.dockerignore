@@ -1,0 +1,17 @@
+# Зависимости и артефакты сборки (собираются внутри контейнера)
+node_modules
+.next
+.turbo
+
+# Git и окружение
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+
+# Документация и прочее
+*.md
+.cursor
+.vscode
+.DS_Store
