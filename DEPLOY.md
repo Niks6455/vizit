@@ -135,6 +135,25 @@ pnpm build
 pm2 restart vizit
 ```
 
+## Удалить приложение из PM2 и поднять заново
+
+Если нужно полностью убрать процесс из PM2 и создать его с нуля:
+
+```bash
+cd ~/apps/vizit/front
+
+# Удалить процесс из PM2
+pm2 delete vizit
+
+# Запустить заново
+pm2 start "pnpm start" --name vizit --cwd $(pwd)
+
+# Сохранить конфиг (чтобы пережило перезагрузку сервера)
+pm2 save
+```
+
+После этого проверь: `pm2 status` и `pm2 logs vizit`.
+
 ## Полезные команды PM2
 
 ```bash
@@ -144,6 +163,87 @@ pm2 restart vizit   # Перезапуск
 pm2 stop vizit      # Остановка
 pm2 delete vizit    # Удаление из PM2
 ```
+
+## Деплой через Docker
+
+Из папки `front/`:
+
+```bash
+cd front
+
+# Сборка образа
+docker build -t vizit .
+
+# Запуск (порт 3000)
+docker run -d -p 3000:3000 --name vizit vizit
+```
+
+Либо из корня репозитория (контекст — папка front):
+
+```bash
+docker build -f front/Dockerfile -t vizit front
+```
+
+Переменные окружения (если понадобятся):
+
+```bash
+docker run -d -p 3000:3000 -e NODE_ENV=production --name vizit vizit
+```
+
+Остановка и удаление контейнера:
+
+```bash
+docker stop vizit && docker rm vizit
+```
+
+---
+
+## Деплой на GitHub Pages
+
+Сайт собирается в статику и публикуется на GitHub Pages при каждом пуше в ветку `main`.
+
+### Что сделано в репозитории
+
+- **`front/next.config.ts`** — включён `output: "export"` и `basePath` для корректных путей на Pages.
+- **`.github/workflows/pages.yml`** — workflow: сборка Next.js и деплой через GitHub Actions.
+
+### Что сделать в GitHub
+
+1. Запушь репозиторий на GitHub (если ещё не запушен).
+2. Включи GitHub Pages: **Settings → Pages** → в блоке **Build and deployment** выбери **Source: GitHub Actions**.
+3. После успешного запуска workflow (Actions → Deploy to GitHub Pages) сайт появится по адресу:  
+   **`https://<твой-username>.github.io/<имя-репозитория>/`**  
+   Например, при репозитории `vizit`: `https://Niks6455.github.io/vizit/`.
+
+### Локальная разработка
+
+Локально `BASE_PATH` не задаётся — сайт открывается с корня (`http://localhost:3000`). В GitHub Actions при сборке подставляется `BASE_PATH=/<имя-репозитория>`, поэтому стили и ссылки на Pages работают правильно.
+
+### Если workflow падает
+
+- Открой **Actions** в репозитории и посмотри логи упавшего run.
+- Убедись, что в **Settings → Pages** выбран источник **GitHub Actions**.
+- Если деплой нужен с другой ветки — в `.github/workflows/pages.yml` в `on.push.branches` укажи нужную ветку (например `master`).
+
+### Кастомный домен (например keykap.space)
+
+Чтобы открывать сайт по своему домену **https://keykap.space/**:
+
+1. **В GitHub:** зайди в репозиторий → **Settings → Pages**. В блоке **Custom domain** введи `keykap.space` (или `www.keykap.space`, если нужен вариант с www) и нажми **Save**.
+2. **У регистратора домена (где куплен keykap.space):** настрой DNS:
+   - **Вариант A (рекомендуется):** создай запись **CNAME** с именем `@` (или корневой домен, как у регистратора) или `www`, чтобы она указывала на `<твой-username>.github.io` (например `niks6455.github.io`).  
+     Если регистратор не даёт CNAME для корня (@), используй **ANAME**/ALIAS на `niks6455.github.io` или записи **A** на IP GitHub:
+     - `185.199.108.153`
+     - `185.199.109.153`
+     - `185.199.110.153`
+     - `185.199.111.153`
+   - **Вариант с www:** CNAME для `www` → `niks6455.github.io`. Корень (@) — по желанию через A-записи выше или редирект с корня на www у регистратора.
+3. Подожди 5–60 минут, пока обновятся DNS. В **Settings → Pages** GitHub покажет, что домен проверен (галочка).
+4. Включи **Enforce HTTPS** в том же блоке Custom domain.
+
+После этого сайт будет открываться по **https://keykap.space/** (и по **https://niks6455.github.io/vizit/** по-прежнему). Иконки и картинки должны грузиться: в сборке используется префикс путей для GitHub Pages.
+
+---
 
 ## Если что-то не работает
 

@@ -8,6 +8,7 @@ import { Section } from "../molecules/Section";
 import ScrollStack, { ScrollStackItem } from "../molecules/ScrollStack";
 import { useMediaQuery } from "../../_hooks/useMediaQuery";
 import { reachGoal } from "../../_lib/mailRuPixel";
+import { assetUrl } from "../../_utils/basePath";
 
 export function ProjectsSection({ profile }: { profile: Profile }) {
   const [open, setOpen] = useState(false);
@@ -70,7 +71,7 @@ export function ProjectsSection({ profile }: { profile: Profile }) {
                         className="flex items-center gap-2 rounded-full border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.03)] px-3 py-1 text-[13px] leading-6 text-(--muted) transition-colors hover:bg-[rgba(255,255,255,0.06)]"
                       >
                         {l.label}
-                        <img src="/icons/arrow.svg" alt="arrow-right" className="w-5 h-5" />
+                        <img src={assetUrl("/icons/arrow.svg")} alt="arrow-right" className="w-5 h-5" />
                       </a>
                     ))}
                   </div>
@@ -132,7 +133,7 @@ export function ProjectsSection({ profile }: { profile: Profile }) {
                       className="flex items-center gap-2 h-10 items-center justify-center rounded-full border border-[rgba(145,255,0,0.22)] bg-[rgba(145,255,0,0.06)] px-4 text-[13px] font-medium text-foreground transition-colors hover:bg-[rgba(145,255,0,0.12)]"
                     >
                       Открыть
-                        <img src="/icons/arrow.svg" alt="arrow-right" className="w-5 h-5" />
+                        <img src={assetUrl("/icons/arrow.svg")} alt="arrow-right" className="w-5 h-5" />
                     </a>
                   ) : null}
                 </div>
@@ -153,7 +154,7 @@ export function ProjectsSection({ profile }: { profile: Profile }) {
                       className="flex items-center gap-2 rounded-full border border-[rgba(255,255,255,0.10)] bg-[rgba(255,255,255,0.03)] px-3 py-1 text-[13px] leading-6 text-(--muted) transition-colors hover:bg-[rgba(255,255,255,0.06)]"
                     >
                       {l.label}
-                      <img src="/icons/arrow.svg" alt="arrow-right" className="w-5 h-5" />
+                      <img src={assetUrl("/icons/arrow.svg")} alt="arrow-right" className="w-5 h-5" />
                     </a>
                   ))}
                 </div>

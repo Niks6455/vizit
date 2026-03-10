@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import type { ProfileProject } from "../../_data/profile";
+import { assetUrl } from "../../_utils/basePath";
 import { Chip } from "../atoms/Chip";
 import { ImageLightbox } from "./ImageLightbox";
 import { Modal } from "./Modal";
@@ -26,7 +27,7 @@ export function ProjectModal({
 
   const images = project.images?.length
     ? project.images
-    : ["/projects/placeholder-1.svg"];
+    : [assetUrl("/projects/placeholder-1.svg")];
 
   return (
     <Modal open={open} title={project.name} onClose={onClose}>
@@ -64,7 +65,7 @@ export function ProjectModal({
                     <span className="text-(--muted)">{l.label}</span>
                     <span className="font-medium flex items-center gap-2">
                       {formatHost(l.href)}
-                      <img src="/icons/arrow.svg" alt="arrow-right" className="w-5 h-5" />
+                      <img src={assetUrl("/icons/arrow.svg")} alt="arrow-right" className="w-5 h-5" />
                     </span>
                   </a>
                 ))}

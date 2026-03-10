@@ -1,4 +1,5 @@
 import { cn } from "../../_utils/cn";
+import { assetUrl } from "../../_utils/basePath";
 
 export function LinkButton({
   href,
@@ -38,9 +39,9 @@ export function LinkButton({
         style={{ transform: "translateY(-0.5px)" }}
       >
         {arrowVariant === "black" ? (
-            <img src="/icons/arrowBlack.svg" alt="arrow-right" className="w-5 h-5" />
+            <img src={assetUrl("/icons/arrowBlack.svg")} alt="arrow-right" className="w-5 h-5" />
         ) : (
-          <img src="/icons/arrow.svg" alt="arrow-right" className="w-5 h-5" />
+          <img src={assetUrl("/icons/arrow.svg")} alt="arrow-right" className="w-5 h-5" />
         )}
       </span>
     </a>
