@@ -164,10 +164,7 @@ export const profile: Profile = {
         "Платформа для проведения конференции: роли пользователей, модули аутентификации, формы подачи материалов, интеграция с REST API.",
       stack: ["React", "TypeScript", "Tanstack Query", "Redux"],
       images: ["/images/ssFirst.png", "/images/ssSecond.png"],
-      links: [
-        { label: "Platform", href: "https://ssas.sfedu.ru/" },
-        { label: "GitHub", href: "https://github.com/Niks6455" },
-      ],
+      links: [{ label: "Platform", href: "https://ssas.sfedu.ru/" }],
     },
     {
       name: "WORKLOAD",
@@ -176,9 +173,6 @@ export const profile: Profile = {
         "Информационная система для распределения учебной нагрузки преподавателей: сложные CRUD-сценарии, фильтрации, роли пользователей, работа с большими таблицами и формами.",
       stack: ["React", "TypeScript", "REST API", "WebSocket", "Redux"],
       images: ["/images/workloadFirst.png", "/images/workloadSecond.png"],
-      links: [
-        { label: "GitHub", href: "https://github.com/simai1/workloadICTIS" },
-      ],
     },
     {
       name: "ICTIS",
