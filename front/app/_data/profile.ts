@@ -184,6 +184,22 @@ export const profile: Profile = {
       images: ["/images/ictisFirst.png", "/images/ictisSecond.png"],
       links: [{ label: "Platform", href: "https://ictis.sfedu.ru/" }],
     },
+    {
+      name: "Платформа абитуриентов ЮФУ (ICTIS)",
+      description:
+        "Веб-сервис для абитуриентов с направлениями подготовки, условиями и требованиями поступления.",
+      href: "https://abit-ictis.sfedu.ru/directions?level=1",
+      details:
+        "Платформа для поступающих, которая агрегирует информацию о направлениях, конкурсах и правилах поступления. Упрощает выбор образовательной программы за счёт понятной структуры разделов, удобной навигации и быстрого доступа к ключевым данным.",
+      stack: ["WordPress", "JavaScript", "PHP", "MySQL", "CSS"],
+      images: ["/images/abitFirst.png", "/images/abitSecond.png"],
+      links: [
+        {
+          label: "Платформа",
+          href: "https://abit-ictis.sfedu.ru/directions?level=1",
+        },
+      ],
+    },
 
     {
       name: "SOVA-fix",
