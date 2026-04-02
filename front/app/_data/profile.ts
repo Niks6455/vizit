@@ -90,7 +90,7 @@ export const profile: Profile = {
       ],
     },
     {
-      period: "Август 2023 — Март 2025",
+      period: "Июнь 2023 — настоящее время (part-time)",
       company: "ООО «Центр исследований и разработки»",
       title: "Front-end Developer",
       bullets: [
@@ -104,7 +104,7 @@ export const profile: Profile = {
       ],
     },
     {
-      period: "Январь 2022 — Июль 2022",
+      period: "Май 2022 — Июнь 2023",
       company: "SOVA-TECH",
       title: "Front-end Developer",
       bullets: [
